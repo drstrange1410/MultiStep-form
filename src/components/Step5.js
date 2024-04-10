@@ -5,7 +5,7 @@ const Step5 = () => {
     <div className="bg-white grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
         <img
-          src="/images/celebration.png"
+          src="/images/cheering2.png"
           alt="Cheering Illustration"
           className="h-full"
         />

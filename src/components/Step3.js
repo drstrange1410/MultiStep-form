@@ -7,7 +7,7 @@ const Step3 = ({ data, setData }) => {
     <div className=" bg-white grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
         <img
-          src="/images/growth.png"
+          src="/images/growth2.png"
           alt="Pulley Illustration"
           className="h-full"
         />

@@ -22,7 +22,7 @@ const Step4 = ({ data, setData }) => {
         <div className="grid flex md:grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
           <div
             role="button"
-            className={`bg-white-100  rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg text-center pt-3 py-4 pb-0 ${
+            className={`bg-white-100  rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg text-center pt-3 py-1 pb-0 ${
               active === 'b1' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
             }`}
             onClick={() => {
@@ -59,7 +59,7 @@ const Step4 = ({ data, setData }) => {
               handleChange();
             }}
           >
-            <img alt="equation" src="./images/eq3.png" className="pt-1" />
+            <img alt="equation" src="./images/eq3.png" className="pt-1 py-1" />
             <p className="text-gray-600 mb-1 ">Intermediate Algebra</p>
             <p className="text-sm text-gray-500">Intermediate</p>
           </div>

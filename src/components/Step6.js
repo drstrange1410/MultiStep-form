@@ -5,11 +5,11 @@ const Step5 = () => {
   const [active, setActive] = useState('');
 
   return (
-    <div className="bg-white flex flex-col items-center justify-center">
+    <div className="bg-white flex flex-col items-center justify-center  mt-20">
       <h2 className="text-2xl font-bold mb-4 text-center ...">
         Learning paths based on your answers
       </h2>
-      <p className="text-gray-600 mb-4 text-center">
+      <p className="text-gray-600 mb-8 text-center">
         Choose one to get started. You can switch anytime.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -22,23 +22,22 @@ const Step5 = () => {
             setActive('b1');
           }}
         >
-          <div className="px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex justify-center">
+            <span class="bg-yellow-500 text-black text-xs px-2.5 py-0.5 rounded-full  text-center  font-medium -translate-y-1/2 ">
+              MOST POPULAR
+            </span>
+          </div>
+
+          <div className="px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-2">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Foundational Math Build
-              </h3>
-              <p className="text-gray-600">
+              <p className="text-black">
+                <span className="font-bold  ">Foundational Math </span>
                 Build your foundational skills in algebra, geometry, and
                 probability.
               </p>
             </div>
 
-            <img alt="course" src="/images/course.png" />
-          </div>
-          <div className="px-6 py-4 bg-gray-100 mb-1">
-            <span className="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
-              MOST POPULAR
-            </span>
+            <img alt="course" src="/images/courses3.png" />
           </div>
         </div>
         <div
@@ -50,17 +49,17 @@ const Step5 = () => {
             setActive('b2');
           }}
         >
-          <div className="px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-2 pb-0">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Mathematical Thinking
-              </h3>
-              <p className="text-gray-600">
-                Build your foundational skills in algebra, geometry, and
-                probability.
-              </p>
+              <div>
+                <p className="text-black">
+                  <span className="font-bold  ">Mathematical Thinking </span>
+                  Build your foundational skills in algebra, geometry, and
+                  probability.
+                </p>
+              </div>
             </div>
-            <img alt="course" src="/images/course.png" />
+            <img alt="course" src="/images/courses3.png" />
           </div>
         </div>
       </div>
