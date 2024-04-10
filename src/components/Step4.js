@@ -11,18 +11,18 @@ const Step4 = ({ data, setData }) => {
 
   return (
     <div className="bg-white flex flex-col items-center justify-center">
-      <div className="p-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+      <div className="">
+        <h2 className="text-2xl font-bold mb-4 text-center ...">
           What is your math comfort level?
         </h2>
-        <p className="text-gray-600 mb-8 text-center">
+        <p className="text-gray-600 mb-4 text-center">
           Choose the highest level you feel confident in — you can always adjust
           later.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid flex md:grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-4">
           <div
             role="button"
-            className={`bg-white-100 rounded-lg border justify-center border-gray hover:border-yellow-300 hover:shadow-lg align-text-bottom pt-3 py-4 pb-0 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+            className={`bg-white-100  rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg text-center pt-3 py-4 pb-0 ${
               active === 'b1' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
             }`}
             onClick={() => {
@@ -32,12 +32,12 @@ const Step4 = ({ data, setData }) => {
           >
             <img alt="equation" src="./images/eq1.png" />
             {/* <p className="text-lg font-bold mb-2">5 × 1⁄2 = ?</p> */}
-            <p className="text-gray-600 mb-1 text-center">Arithmetic</p>
-            <p className="text-sm text-gray-500 text-center">Introductory</p>
+            <p className="text-gray-600 mb-1 ">Arithmetic</p>
+            <p className="text-sm text-gray-500">Introductory</p>
           </div>
           <div
             role="button"
-            className={`bg-white-100 rounded-lg border justify-center border-gray hover:border-yellow-300 hover:shadow-lg text-center pt-3 py-4 pb-0 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+            className={`bg-white-100 rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg text-center pt-3 py-4 pb-0 ${
               active === 'b2' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
             }`}
             onClick={() => {
@@ -51,7 +51,7 @@ const Step4 = ({ data, setData }) => {
           </div>
           <div
             role="button"
-            className={`bg-white-100 rounded-lg border p-4 justify-center border-gray hover:border-yellow-300 hover:shadow-lg  pt-0 text-center focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+            className={`bg-white-100 rounded border px-0 py-1 justify-center border-gray hover:border-yellow-300 hover:shadow-lg  pt-0 text-center ${
               active === 'b3' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
             }`}
             onClick={() => {
@@ -59,13 +59,13 @@ const Step4 = ({ data, setData }) => {
               handleChange();
             }}
           >
-            <img alt="equation" src="./images/eq3.png" />
-            <p className="text-gray-600 mb-1">Intermediate Algebra</p>
-            <p className="text-sm text-gray-500 mb-0">Intermediate</p>
+            <img alt="equation" src="./images/eq3.png" className="pt-1" />
+            <p className="text-gray-600 mb-1 ">Intermediate Algebra</p>
+            <p className="text-sm text-gray-500">Intermediate</p>
           </div>
           <div
             role="button"
-            className={`bg-white-100 rounded-lg border p-4 justify-center border-gray hover:border-yellow-300 hover:shadow-lg  pt-2 text-center focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+            className={`bg-white-100 rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg  pt-1 text-center ${
               active === 'b4' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
             }`}
             onClick={() => {

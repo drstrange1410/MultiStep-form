@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
 
 const Step1 = ({ data, setData }) => {
   // const { register, handleSubmit } = useForm();
@@ -13,19 +12,18 @@ const Step1 = ({ data, setData }) => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4 flex justify-center ...">
+      <h2 className="text-2xl font-bold mb-4 text-center ...">
         Which describes you best?
       </h2>
 
-      <p class="flex justify-center ...">
+      <p class="text-gray-600 mb-4 text-center">
         This will help us personalize your experience.
       </p>
 
-      <ul class="flex min-w-[240px] flex-col gap-2 p-2 font-sans text-base font-normal text-blue-gray-700">
+      <ul class="flex flex-col gap-2 font-sans text-base font-normal text-blue-gray-700">
         <li
           role="button"
-          id="b1"
-          className={`bg-white-100 rounded-lg shadow-sm border-gray border flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:border-yellow-300 hover:shadow-lg focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+          className={`bg-white-100 rounded border-gray border flex items-center w-full p-3 text-start hover:border-yellow-300 hover:shadow-lg text-slate-950 ${
             active === 'b1' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
           }`}
           onClick={() => {
@@ -35,9 +33,9 @@ const Step1 = ({ data, setData }) => {
         >
           <div class="grid mr-4 place-items-center">
             <img
-              alt="candice"
+              alt="student"
               src="/images/studentIcon.png"
-              class="relative inline-block h-12 w-12  object-cover object-center"
+              class="relative inline-block h-12 w-12 object-cover object-center"
             />
           </div>
           <div>
@@ -49,7 +47,7 @@ const Step1 = ({ data, setData }) => {
         </li>
         <li
           role="button"
-          className={`bg-white-100 rounded-lg shadow-sm border-gray border flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:border-yellow-300 hover:shadow-lg focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+          className={`bg-white-100 rounded border-gray border flex items-center w-full p-3 text-start hover:border-yellow-300 hover:shadow-lg text-slate-950 ${
             active === 'b2' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
           }`}
           onClick={() => {
@@ -59,7 +57,7 @@ const Step1 = ({ data, setData }) => {
         >
           <div class="grid mr-4 place-items-center">
             <img
-              alt="alexander"
+              alt="professional"
               src="/images/professional.png"
               class="relative inline-block h-12 w-12  object-cover object-center"
             />
@@ -74,7 +72,7 @@ const Step1 = ({ data, setData }) => {
 
         <li
           role="button"
-          className={`bg-white-100 rounded-lg shadow-sm border-gray border flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:border-yellow-300 hover:shadow-lg focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+          className={`bg-white-100 rounded border-gray border flex items-center w-full p-3 text-start hover:border-yellow-300 hover:shadow-lg text-slate-950 ${
             active === 'b3' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
           }`}
           onClick={() => {
@@ -84,7 +82,7 @@ const Step1 = ({ data, setData }) => {
         >
           <div class="grid mr-4 place-items-center">
             <img
-              alt="emma"
+              alt="parent"
               src="/images/parent.png"
               class="relative inline-block h-12 w-12 object-cover object-center"
             />
@@ -97,7 +95,7 @@ const Step1 = ({ data, setData }) => {
           </div>
         </li>
         <li
-          className={`bg-white-100 rounded-lg shadow-sm border-gray border flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:border-yellow-300 hover:shadow-lg focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+          className={`bg-white-100 rounded border-gray border flex items-center w-full p-3 text-start hover:border-yellow-300 hover:shadow-lg text-slate-950 ${
             active === 'b4' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
           }`}
           onClick={() => {
@@ -107,7 +105,7 @@ const Step1 = ({ data, setData }) => {
         >
           <div class="grid mr-4 place-items-center">
             <img
-              alt="emma"
+              alt="lifelong learner"
               src="/images/oldwoman.png"
               class="relative inline-block h-12 w-12   object-cover object-center"
             />
@@ -117,7 +115,7 @@ const Step1 = ({ data, setData }) => {
           </div>
         </li>
         <li
-          className={`bg-white-100 rounded-lg shadow-sm border-gray border flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:border-yellow-300 hover:shadow-lg focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+          className={`bg-white-100 rounded border-gray border flex items-center w-full p-3 text-start hover:border-yellow-300 hover:shadow-lg text-slate-950 ${
             active === 'b5' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
           }`}
           onClick={() => {
@@ -127,7 +125,7 @@ const Step1 = ({ data, setData }) => {
         >
           <div class="grid mr-4 place-items-center">
             <img
-              alt="emma"
+              alt="teacher"
               src="/images/teacher.png"
               class="relative inline-block h-12 w-12 object-cover object-center"
             />
@@ -137,7 +135,7 @@ const Step1 = ({ data, setData }) => {
           </div>
         </li>
         <li
-          className={`bg-white-100 rounded-lg shadow-sm border-gray border flex items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start hover:border-yellow-300 hover:shadow-lg focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 ${
+          className={`bg-white-100 rounded border-gray border flex items-center w-full p-3 text-start hover:border-yellow-300 hover:shadow-lg text-slate-950 ${
             active === 'b6' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
           }`}
           onClick={() => {
@@ -147,7 +145,7 @@ const Step1 = ({ data, setData }) => {
         >
           <div class="grid mr-4 place-items-center">
             <img
-              alt="emma"
+              alt="other"
               src="/images/other.png"
               class="relative inline-block h-12 w-12 object-cover object-center"
             />

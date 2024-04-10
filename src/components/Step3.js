@@ -4,13 +4,16 @@ const Step3 = ({ data, setData }) => {
   setData(false);
 
   return (
-    <div className=" bg-white flex items-center space-x-44 mb-40 w-full">
-      <img
-        src="/images/growth.png"
-        alt="Pulley Illustration"
-        className="h-80"
-      />
+    <div className=" bg-white grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
+        <img
+          src="/images/growth.png"
+          alt="Pulley Illustration"
+          className="h-full"
+        />
+      </div>
+
+      <div className="flex flex-col m-auto justify-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           You're in the right place
         </h2>

@@ -7,11 +7,15 @@ import Step5 from './Step5';
 import Step6 from './Step6';
 import { StepProgressBar } from './StepProgressBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import LoadingScreen from './LoadingScreen';
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [currdis, setcurrdis] = useState(true);
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading for 3 seconds
 
   const setData = (value) => {
     setcurrdis(value);
@@ -40,24 +44,37 @@ const MultiStepForm = () => {
       case 5:
         return <Step5 />;
       case 6:
-        return <Step6 />;
+        // return <LoadingScreen loading={loading} setLoading={setLoading} />;
+        return (
+          <div>
+            {loading ? (
+              <LoadingScreen loading={loading} setLoading={setLoading} />
+            ) : (
+              <Step6 />
+            )}
+          </div>
+        );
       default:
         return null;
     }
   };
 
   return (
-    <div className="w-2/3 bg-white rounded-lg  p-6">
-      <div className="mt-5 mb-8 flex flex-row">
-        {currentStep > 1 && currentStep <= 5 && (
-          <button
-            className="w-1/12 bg-white-300 text-gray-800 font-bold py-0 px-4 rounded flex justify-center .."
-            onClick={handlePrev}
-          >
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </button>
-        )}
-        {currentStep <= 1 && <div className="w-1/12"></div>}
+    <div className="w-2/3 bg-white p-2">
+      <div className="mt-5 mb-5 flex flex-row justify-center items-center">
+        <div>
+          {currentStep <= 5 && (
+            <button
+              className={`w-8 bg-white py-0 px-2 ${
+                currentStep === 1 ? 'opacity-0' : 'opacity-100'
+              }`}
+              onClick={handlePrev}
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+          )}
+        </div>
+
         {currentStep <= 5 && <StepProgressBar step={currentStep} />}
       </div>
 
@@ -66,7 +83,7 @@ const MultiStepForm = () => {
         {currentStep < 6 && (
           <button
             type="submit"
-            class="bg-blue-500 text-white mt-4 disabled:bg-blue-300 px-3 py-2 rounded-md"
+            class="bg-neutral-950 text-white mt-4 disabled:bg-neutral-200 px-8 py-2 rounded"
             onClick={handleNext}
             disabled={currentStep > 4 ? false : currdis}
           >

@@ -1,19 +1,30 @@
 import React from 'react';
+import { useState } from 'react';
 
 const Step5 = () => {
+  const [active, setActive] = useState('');
+
   return (
     <div className="bg-white flex flex-col items-center justify-center">
-      <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-6">
+      <h2 className="text-2xl font-bold mb-4 text-center ...">
         Learning paths based on your answers
       </h2>
-      <p className="text-lg text-gray-600 text-center mb-12">
+      <p className="text-gray-600 mb-4 text-center">
         Choose one to get started. You can switch anytime.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-white-100 rounded-lg border justify-center border-gray hover:border-yellow-300 hover:shadow-lg">
+        <div
+          role="button"
+          className={`bg-white-100 rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg  ${
+            active === 'b1' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
+          }`}
+          onClick={() => {
+            setActive('b1');
+          }}
+        >
           <div className="px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">
                 Foundational Math Build
               </h3>
               <p className="text-gray-600">
@@ -30,10 +41,18 @@ const Step5 = () => {
             </span>
           </div>
         </div>
-        <div className="bg-white-100 rounded-lg border justify-center border-gray hover:border-yellow-300 hover:shadow-lg">
+        <div
+          role="button"
+          className={`bg-white-100 rounded border justify-center border-gray hover:border-yellow-300 hover:shadow-lg  ${
+            active === 'b2' ? 'border-yellow-300 shadow-lg' : 'bg-white-100'
+          }`}
+          onClick={() => {
+            setActive('b2');
+          }}
+        >
           <div className="px-6 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">
                 Mathematical Thinking
               </h3>
               <p className="text-gray-600">
